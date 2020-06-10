@@ -25,20 +25,12 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements. 
     As an extra challenge, see if you can get that down to three.
     """
-    if moves==True:
-        if should_move==True:
-            return "No Problem"
-        else:
-            return "WD-40"
-    elif moves==False:
-        if should_move==True:
-            return "No Problem"
-        else:
-            return "Duct Tape"
-
-
-
-
+    if moves and not should_move:
+        return "Duct Tape"
+    if not moves and should_move:
+        return "WD-40"
+    else:
+         return "No Problem"
 
 
 def loops_1a():
@@ -48,7 +40,9 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    
+    star=['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
+    for x in range(len(star)):
+        print str
 
 
 def loops_1c(number_of_items=5, symbol="#"):
