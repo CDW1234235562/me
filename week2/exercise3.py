@@ -40,9 +40,12 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    star=['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
-    for x in range(len(star)):
-        print str
+    store = []
+    symbol = "*"
+    for i in range (1,11):
+        store.append(symbol)
+
+    return store 
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -52,7 +55,11 @@ def loops_1c(number_of_items=5, symbol="#"):
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    return None
+    store = []
+    for i in range(0, number_of_items):
+        store.append(symbol)
+    
+    return store 
 
 
 def loops_2():
@@ -73,7 +80,15 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+   columns = []
+   symbol = "*"
+   for x in range(10):
+       row = []
+       for y in range(0,10)
+       columns.append(symbol)
+    
+    return colums 
+
 
 
 def loops_3():
@@ -191,7 +206,7 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    
 
 
 def lp(some_kind_of_list, exercise_name):
