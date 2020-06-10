@@ -80,15 +80,14 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-   columns = []
-   symbol = "*"
-   for x in range(10):
-       row = []
-       for y in range(0,10)
-       columns.append(symbol)
+    coulum=[]
+    for i in range (10):
+       rows=[]
+       for j in range (10):
+           rows.append("*")
+       coulum.append(rows)
     
-    return colums 
-
+    return coulum
 
 
 def loops_3():
