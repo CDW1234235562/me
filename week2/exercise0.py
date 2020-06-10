@@ -91,7 +91,7 @@ def shout_with_a_number(a_string, a_number):
 
     HINT: Lookup how to cast a_number to a string or lookup how to use string formatting in python
     """
-    the_answer = a_string.upper(), str(a_number)
+    the_answer = a_string.upper() + " " + str(a_number) 
     return the_answer
 
 
