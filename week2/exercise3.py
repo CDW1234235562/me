@@ -111,7 +111,15 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    number_field=[]
+    for i in range(10):
+        row=[]
+        for j in range(10):
+            row.append(i)
+        number_field.append(row)
+        
+    print (number_field)
+    return number_field 
 
 
 def loops_4():
