@@ -21,7 +21,7 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    return range (10)
+    return range (1,6,1)
 
 
 def two_step_ranger(start, stop):
@@ -30,7 +30,7 @@ def two_step_ranger(start, stop):
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    return range (10,2)
+    return range (1,10,2)
 
 
 def stubborn_asker(low, high):
@@ -41,7 +41,19 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    return None
+    number = None
+    number = int ( input ("input a number") )
+    while not (low < number < high ):
+        if number < low:
+            print ("too low")
+        if number > high:
+            print ("too high")
+        if number < high and number > low:
+            print ("bingo")
+            return number
+         number = int ( input ("input a number") )
+    return number
+        
 
 
 def not_number_rejector(message):
