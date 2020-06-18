@@ -12,20 +12,31 @@ def binary_search(low, high, actual_number):
     This is going to be your first 'algorithm' in the usual sense of the word!
     you'll give it a range to guess inside, and then use binary search to home
     in on the actual_number.
-    
+
     Each guess, print what the guess is. Then when you find the number return
     the number of guesses it took to get there and the actual number
     as a dictionary. make sure that it has exactly these keys:
     {"guess": guess, "tries": tries}
-    
+
     This will be quite hard, especially hard if you don't have a good diagram!
-    
+
     Use the VS Code debugging tools a lot here. It'll make understanding 
     things much easier.
     """
-    tries = 0
-    guess = 0
-    return {"guess": guess, "tries": tries}
+    count = 0
+    mid = 0
+
+    while low <= high:
+        mid = int((low+high)/2)
+        if mid > actual_number:
+            high = mid-1
+            count += 1
+        elif mid < actual_number:
+            low = mid+1
+            count += 1
+        else:
+            return 'guess: '+str(mid)+' '+'tries：'+str(count)
+    return 'none'
 
 
 if __name__ == "__main__":
