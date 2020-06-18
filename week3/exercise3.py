@@ -31,6 +31,8 @@ def advancedGuessingGame():
     upperBound = input("Enter an upper bound: ")
     while not upperBound.isdigit():
       upperBound = input("{} is not a number, try angain:".format(upperBound))
+    while upperBound<2:
+      upperBound = input("{} has to be larger our equal to 2, try angain:".format(upperBound))
     print("OK then, a number between _ and {} ?".format(upperBound))
     upperBound = int(upperBound)
 
