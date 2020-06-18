@@ -25,8 +25,45 @@ def advancedGuessingGame():
     Remember to think modular. Try to keep your functions small and single
     purpose if you can!
     """
+    print("\nWelcome to the guessing game!")
+    print("A number between _ and _ ?")
+    
+    upperBound = input("Enter an upper bound: ")
+    while not upperBound.isdigit():
+      upperBound = input("{} is not a number, try angain:".format(upperBound))
+    print("OK then, a number between _ and {} ?".format(upperBound))
+    upperBound = int(upperBound)
 
+    lowerBound = input("Enter an lower bound: ")
+    while not lowerBound.isdigit():
+      lowerBound = input("{} is not a number, try angain:".format(lowerBound)) 
+    while (upperBound-(int(lowerBound))<=2):
+      lowerBound = input("{} is too big, try angain:".format(lowerBound)) 
+    print("OK then, a number between {} and {} ?".format(lowerBound,upperBound))
+    lowerBound = int(lowerBound)
+
+    actualNumber = random.randint(lowerBound, upperBound)
+
+    guessed = False
+
+    while not guessed:
+        guessedNumber = input("Guess a number: ")
+        while not guessedNumber.isdigit():
+          guessedNumber = input("{} is not a number, try angain:".format(guessedNumber))
+        while not (lowerBound < int(guessedNumber) < upperBound):
+          guessedNumber = input("{} is out of range, try angain:".format(guessedNumber))
+        print("You guessed {},".format(guessedNumber),)
+        guessedNumber=int(guessedNumber)
+        if guessedNumber == actualNumber:
+            print("You got it!! It was {}".format(actualNumber))
+            guessed = True
+        elif guessedNumber < actualNumber:
+            print("Too small, try again :'(")
+        else:
+            print("Too big, try again :'(")
     return "You got it!"
+
+
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
 
