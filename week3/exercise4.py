@@ -35,7 +35,7 @@ def binary_search(low, high, actual_number):
             low = mid+1
             count += 1
         else:
-            return 'guess: '+str(mid)+' '+'tries：'+str(count)
+            return {"guess": mid, "tries": count}
     return 'none'
 
 
