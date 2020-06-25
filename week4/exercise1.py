@@ -36,7 +36,12 @@ def get_some_details():
     json_data = open(LOCAL + "/lazyduck.json").read()
 
     data = json.loads(json_data)
-    return {"lastName": None, "password": None, "postcodePlusID": None}
+    a = data["results"][0]["name"]["last"]
+    b = data["results"][0]["login"]["password"]
+    postcode = data["results"][0]["location"]["postcode"]
+    Id = int(data["results"][0]["id"]["value"])
+    c = postcode + Id
+    return {"lastName": (a), "password": (b), "postcodePlusID": (c)}
 
 
 def wordy_pyramid():
@@ -84,7 +89,7 @@ def pokedex(low=1, high=5):
     Using the Pokemon API: https://pokeapi.co get some JSON using the request library
     (a working example is filled in below).
     Parse the json and extract the values needed.
-    
+
     TIP: reading json can someimes be a bit confusing. Use a tool like
          http://www.jsoneditoronline.org/ to help you see what's going on.
     TIP: these long json accessors base["thing"]["otherThing"] and so on, can
