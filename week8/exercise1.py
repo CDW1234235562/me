@@ -144,7 +144,7 @@ def pet_filter(letter="a"):
             "hedgehog","guppy",]
     # fmt: on
     filtered = []
-    for x in xrange(len(pets)):
+    for x in range(len(pets)):
         pet = pets[x]
         if pet[0]==letter:
             filtered.append(pet)
@@ -159,12 +159,17 @@ def best_letter_for_pets():
     TIP: return just a letter, not the list of animals.
     """
     import string
-
-    form pet_filter import pet
-    ji
-
+    import numpy as np
+    
     the_alphabet = string.ascii_lowercase
-    popular_letter = ""
+    count = []
+    for i in the_alphabet:
+        pet_list = pet_filter(i)
+        pet_count = len(pet_list)
+        count.append(pet_count)
+    index = count.index(max(count))
+    
+    popular_letter = strthe_alphabet[index]
 
     return popular_letter
 
