@@ -161,7 +161,8 @@ def best_letter_for_pets():
     import string
 
     form pet_filter import pet
-    
+    ji
+
     the_alphabet = string.ascii_lowercase
     popular_letter = ""
 
