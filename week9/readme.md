@@ -4,3 +4,8 @@ return......
 
 form (place) import (function) 
 will input data form(return)
+
+
+numpy (New):
+np.unravel_index(目标，shape)
+argmax & argmin (返回最大值&最小值)
